@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara's Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Areeba's Resume</h1>
+        <p>Software Engineer | Web Developer</p>
+    </header>
+
+    <main>
+        <section id="personal-info">
+            <h2>Personal Information</h2>
+            <img src="/public/images/profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+            <div class="contact-details">
+                <p><strong>Name:</strong> Areeba</p>
+                <p><strong>Email:</strong> m.ali9851kk@gmail.com
+                </p>
+                <p><strong>Phone:</strong> 123-456-7890</p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor's Degree in Software Engineering</h3>
+                <p><strong>University of ABC</strong> - 2020 - 2024</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Next.js</li>
+                <li>TypeScript</li>
+                <li>Tailwind CSS</li>
+                <li>JavaScript</li>
+                <li>HTML & CSS</li>
+            </ul>
+        </section>
+
+        <section id="work-experience">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>Frontend Developer</h3>
+                <p><strong>Senior Student</strong> - MAy 2024 </p>
+                <p>Help the companions </p>
+            </div>
+        </section>
+
+        <div id="controls">
+            <button id="toggle-skills">Toggle Skills</button>
+            <button id="toggle-education">Toggle Education</button>
+            <button id="toggle-experience">Toggle Experience</button>
+        </div>
+    </main>
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.style.display = section.style.display === "none" ? "block" : "none";
+            }
+        }
+
+        document.getElementById('toggle-skills')?.addEventListener('click', () => toggleSection('skills'));
+        document.getElementById('toggle-education')?.addEventListener('click', () => toggleSection('education'));
+        document.getElementById('toggle-experience')?.addEventListener('click', () => toggleSection('work-experience'));
+    </script>
+    
+
+    <script src="resume.ts" ></script>
+</body>
+</html>
